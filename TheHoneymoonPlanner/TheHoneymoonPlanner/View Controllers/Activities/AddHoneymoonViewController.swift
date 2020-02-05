@@ -15,6 +15,7 @@ class AddHoneymoonViewController: UIViewController {
     var vacationLocation: CLLocation?
 
 
+    @IBOutlet weak var honeymoonNameTextField: UITextField!
     @IBOutlet weak var selectLocationButton: UIButton!
     
     

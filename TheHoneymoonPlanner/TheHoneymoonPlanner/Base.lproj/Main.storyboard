@@ -620,6 +620,7 @@ to drop pin</string>
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="cTZ-nz-c95"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="honeymoonNameTextField" destination="Z66-ru-gRQ" id="axk-nD-BfQ"/>
                         <outlet property="selectLocationButton" destination="p8Y-MN-ovU" id="tRi-ae-HFu"/>
                     </connections>
                 </viewController>
@@ -670,9 +671,8 @@ to drop pin</string>
                                     <constraint firstAttribute="trailing" secondItem="Jkc-vf-ua2" secondAttribute="trailing" id="xhj-f8-muD"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-kg-ha5">
-                                <rect key="frame" x="354" y="93" width="34" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-kg-ha5">
+                                <rect key="frame" x="360" y="94" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="Bbc-fl-chL" eventType="touchUpInside" id="ISf-ER-DS6"/>
@@ -682,6 +682,8 @@ to drop pin</string>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="18c-U7-FBR" firstAttribute="trailing" secondItem="XyE-kg-ha5" secondAttribute="trailing" constant="20" id="GZO-Rb-jF9"/>
+                            <constraint firstItem="XyE-kg-ha5" firstAttribute="top" secondItem="18c-U7-FBR" secondAttribute="top" constant="50" id="Yg3-5Z-q5u"/>
                             <constraint firstItem="xaH-Yp-4RE" firstAttribute="leading" secondItem="VEc-uJ-Vww" secondAttribute="leadingMargin" id="fko-S3-IJg"/>
                             <constraint firstItem="xaH-Yp-4RE" firstAttribute="top" secondItem="18c-U7-FBR" secondAttribute="top" constant="43" id="qzx-xO-KZW"/>
                         </constraints>
@@ -1112,6 +1114,7 @@ to drop pin</string>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Clo-zI-xGm"/>
         <segue reference="woe-Zn-DRx"/>
     </inferredMetricsTieBreakers>
 </document>
