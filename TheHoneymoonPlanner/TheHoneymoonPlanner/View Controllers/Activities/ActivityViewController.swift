@@ -18,6 +18,12 @@ class ActivityViewController: UIViewController {
     
     @IBOutlet weak var endTextField: UITextField!
     
+    var activityName = ""
+    var activityPrice = ""
+    var activityDescription = ""
+    var activityStart = ""
+    var activityEnd = ""
+    
     private var startDatePicker: UIDatePicker?
     private var endDatePicker: UIDatePicker?
 
@@ -41,13 +47,6 @@ class ActivityViewController: UIViewController {
             view.addGestureRecognizer(endTapGesture)
             endTextField.inputView = endDatePicker
         }
-        // Do any additional setup after loading the view.
-    
-    @IBAction func cancelButtonTapped(_ sender: UIButton) {
-    }
-    
-    @IBAction func saveButtonTapped(_ sender: UIButton) {
-    }
     
     @objc func startViewTapped(gestureRecognizer: UITapGestureRecognizer) {
         view.endEditing(true)
@@ -72,16 +71,32 @@ class ActivityViewController: UIViewController {
         
         endTextField.text = dateFormatter.string(from: datePicker.date)
     }
+        // Do any additional setup after loading the view.
+    
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        self.activityName = activityNameTextField.text ?? ""
+        self.activityPrice = activityPriceTextField.text ?? ""
+        self.activityDescription = activityDescriptionTextView.text ?? ""
+        self.activityStart = startTextField.text ?? ""
+        self.activityEnd = endTextField.text ?? ""
+        
+        performSegue(withIdentifier: "SaveActivityAndShowDetailsSegue", sender: self)
+    }
+    
+
+    
 
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //    var vc = segue.destination as! ActivityDetailViewController
     }
-    */
+    
 
 }
