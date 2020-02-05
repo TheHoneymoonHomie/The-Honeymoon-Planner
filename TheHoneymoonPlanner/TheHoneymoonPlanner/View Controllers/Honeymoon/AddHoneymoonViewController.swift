@@ -11,10 +11,14 @@ import CoreLocation
 import CoreData
 
 class AddHoneymoonViewController: UIViewController {
-    
+   
+    // MARK: Properties
+    private var startDatePicker: UIDatePicker?
+    private var endDatePicker: UIDatePicker?
     var vacationLocation: CLLocation?
-
-
+    var vacationLocationTitle: String?
+    
+    // MARK: Outlets
     @IBOutlet weak var honeymoonNameTextField: UITextField!
     @IBOutlet weak var selectLocationButton: UIButton!
     @IBOutlet weak var startTextField: UITextField!
@@ -23,8 +27,9 @@ class AddHoneymoonViewController: UIViewController {
     @IBOutlet weak var addPhotoButton: UIButton!
     @IBOutlet weak var imageView: UIImageView!
     
-    private var startDatePicker: UIDatePicker?
-    private var endDatePicker: UIDatePicker?
+    @IBOutlet weak var costTextField: UITextField!
+    @IBOutlet weak var vacationLocationLabel: UILabel!
+    
     
     override func viewDidLoad() {
     super.viewDidLoad()
@@ -55,6 +60,47 @@ class AddHoneymoonViewController: UIViewController {
     }
     
     @IBAction func saveTapped(_ sender: Any) {
+    }
+    
+    func saveVacationToCoreData() {
+        
+        let imageURL = { () -> URL in
+            let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            
+            let formatter = ISO8601DateFormatter()
+            formatter.formatOptions = [.withInternetDateTime]
+            
+            let name = formatter.string(from: Date())
+            let fileURL = documentsDirectory.appendingPathComponent(name).appendingPathExtension("jpg")
+            
+            return fileURL
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        
+        let vacation = Vacation(context: CoreDataStack.context)
+        
+        guard let vacationLocation = self.vacationLocation else { return }
+        
+        let latitude = Double(vacationLocation.coordinate.latitude)
+        let longitude = Double(vacationLocation.coordinate.longitude)
+        
+        vacation.cost = costTextField.text as? Double ?? 0.00
+        // TODO: FIX THIS
+        vacation.date_end = nil
+        vacation.date_start = nil
+        vacation.imageURL = imageURL()
+        vacation.latitude = latitude
+       // vacation.location = vacationLocation
+        vacation.longitude = longitude
+        vacation.title = honeymoonNameTextField.text
+        vacation.location = vacationLocationLabel.text
+        
+        CoreDataStack.saveContext()
+        
+        
     }
     
     

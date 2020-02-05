@@ -19,6 +19,7 @@ class AddHoneymoonLocationViewController: UIViewController {
             print("pressedLocation was set")
         }
     }
+    var vacationLocationTitle: String?
     
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var addLocationTextField: UITextField!
@@ -71,8 +72,9 @@ class AddHoneymoonLocationViewController: UIViewController {
         if segue.identifier == "SaveBackToAddHoneymoonVCSegue" {
             guard let destinationVC = segue.destination as? AddHoneymoonViewController,
                 let pressedLocation = pressedLocation else { return }
-            
+            let vacationLocationTitle = addLocationTextField.text
             destinationVC.vacationLocation = pressedLocation
+            destinationVC.vacationLocationLabel.text = vacationLocationTitle
         }
     }
 
