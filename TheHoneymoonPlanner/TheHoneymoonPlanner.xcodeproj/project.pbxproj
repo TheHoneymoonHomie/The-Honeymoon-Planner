@@ -156,7 +156,6 @@
 			children = (
 				1CFB392023E8D64B008674FE /* AddActivityMapViewController.swift */,
 				4F1A97A223E5054F00AD3BC3 /* ActivityViewController.swift */,
-				85A4DD5F23E7CA2E001B7A2A /* AddHoneymoonViewController.swift */,
 				1CFB392323E8D6A0008674FE /* ActivityDetailViewController.h */,
 				1CFB392423E8D6A0008674FE /* ActivityDetailViewController.m */,
 			);
@@ -191,6 +190,7 @@
 		8567816F23EA3E5900580A4C /* Honeymoon */ = {
 			isa = PBXGroup;
 			children = (
+				85A4DD5F23E7CA2E001B7A2A /* AddHoneymoonViewController.swift */,
 				4F1A979823E4F84200AD3BC3 /* HoneymoonCollectionViewController.swift */,
 				4F1A97A023E5018E00AD3BC3 /* HoneymoonCellDetailViewController.swift */,
 				1C765EBE23EA949100478262 /* AddhoneyMoonCellViewController.swift */,
