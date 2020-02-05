@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import CoreLocation
+import CoreData
 
 class AddHoneymoonViewController: UIViewController {
+    
+    var vacationLocation: CLLocation?
+
 
     @IBOutlet weak var selectLocationButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
