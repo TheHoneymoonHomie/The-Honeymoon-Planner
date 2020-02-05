@@ -1,19 +1,14 @@
 //
-//  AddActivityMapViewController.swift
+//  AddhoneyMoonCellViewController.swift
 //  TheHoneymoonPlanner
 //
-//  Created by Jerry haaser on 2/3/20.
+//  Created by Jerry haaser on 2/5/20.
 //  Copyright © 2020 Jonalynn Masters. All rights reserved.
 //
 
 import UIKit
 
-class AddActivityMapViewController: UIViewController {
-    
-    var wishlist: Wishlist?
-    var wishlists: [Wishlist] = []
-    var activty: Activity?
-    var activities: [Activity] = []
+class AddhoneyMoonCellViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import CoreData
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "ActivityCollectionViewCell"
 
 class HoneymoonCollectionViewController: UICollectionViewController {
+    
+    var wishlist: Wishlist?
+    var wishlists: [Wishlist] = []
+    var activty: Activity?
+    var activities: [Activity] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,21 +42,23 @@ class HoneymoonCollectionViewController: UICollectionViewController {
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+        
+        //UPDate this to activityController or whatever
+        return activities.count
+        
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? HoneymoonCustomCollectionViewCell else { return UICollectionViewCell() }
+        
+        cell.activty = activty
+        cell.activities = activities
+        cell.wishlist = wishlist
+        cell.wishlists = wishlists
+        
+        //loadImage function
     
         return cell
     }
@@ -85,5 +93,30 @@ class HoneymoonCollectionViewController: UICollectionViewController {
     
     }
     */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddHoneymoonFromCollectionVCSegue" {
+            let destinationVC = segue.destination as? AddhoneyMoonCellViewController
+            //destinationVC?.honeymoonController = honeymoonController
+//            destinationVC?.postController = postController
+            
+        } else if segue.identifier == "CollectionCellDetailViewSegue" {
+            
+            let destinationVC = segue.destination as? HoneymoonCellDetailViewController
+            
+            destinationVC?.activty = activty
+            destinationVC?.activities = activities
+            destinationVC?.wishlist = wishlist
+            destinationVC?.wishlists = wishlists
+            //Example work
+//            guard let indexPath = collectionView.indexPathsForSelectedItems?.first,
+//                let postID = postController.posts[indexPath.row].id else { return }
+//
+//            destinationVC?.postController = postController
+//            destinationVC?.post = postController.posts[indexPath.row]
+//            destinationVC?.imageData = cache.value(for: postID)
+//            destinationVC?.cache = cache
+        }
+    }
 
 }
