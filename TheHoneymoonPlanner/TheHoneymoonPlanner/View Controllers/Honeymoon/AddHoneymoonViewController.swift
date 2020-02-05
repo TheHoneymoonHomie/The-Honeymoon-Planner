@@ -20,6 +20,8 @@ class AddHoneymoonViewController: UIViewController {
     @IBOutlet weak var startTextField: UITextField!
     
     @IBOutlet weak var endTextField: UITextField!
+    @IBOutlet weak var addPhotoButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
     
     private var startDatePicker: UIDatePicker?
     private var endDatePicker: UIDatePicker?
@@ -46,6 +48,8 @@ class AddHoneymoonViewController: UIViewController {
         endTextField.inputView = endDatePicker
     }
     
+    @IBAction func addPhotoButtonTapped(_ sender: Any) {
+    }
     @IBAction func cancelTapped(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

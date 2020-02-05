@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//#import ActivityDetailViewController.h
 
 class ActivityViewController: UIViewController {
     
@@ -96,7 +97,7 @@ class ActivityViewController: UIViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     //    var vc = segue.destination as! ActivityDetailViewController
-    }
+    //}
     
 
 }
