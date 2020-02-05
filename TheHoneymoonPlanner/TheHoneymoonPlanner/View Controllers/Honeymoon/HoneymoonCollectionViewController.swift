@@ -17,6 +17,7 @@ class HoneymoonCollectionViewController: UICollectionViewController {
     var wishlists: [Wishlist] = []
     var activty: Activity?
     var activities: [Activity] = []
+    var vacations: [Vacation] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,16 @@ class HoneymoonCollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
+    func fetchVacationFromCoreData() {
+        let fetchRequest: NSFetchRequest<Vacation> = Vacation.fetchRequest()
+               do {
+                   vacations = try CoreDataStack.context.fetch(fetchRequest)
+                   print(vacations)
+               } catch {
+                   print(error)
+               }
+    }
+    
     /*
     // MARK: - Navigation
 

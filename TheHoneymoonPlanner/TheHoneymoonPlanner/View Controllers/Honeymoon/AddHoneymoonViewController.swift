@@ -99,8 +99,6 @@ class AddHoneymoonViewController: UIViewController {
         vacation.location = vacationLocationLabel.text
         
         CoreDataStack.saveContext()
-        
-        
     }
     
     
