@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19D76" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Activity" representedClassName="Activity" syncable="YES">
+        <attribute name="act_cost" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="act_date_end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="act_date_start" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="act_latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="act_longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="vacation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Activity" inverseName="vacation" inverseEntity="Activity"/>
+    </entity>
+    <entity name="Vacation" representedClassName="Vacation" syncable="YES">
+        <attribute name="cost" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="date_end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="date_start" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="imageURL" optional="YES" attributeType="URI"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <relationship name="activities" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Vacation" inverseName="activities" inverseEntity="Vacation"/>
+    </entity>
+    <entity name="Wishlist" representedClassName="Wishlist" syncable="YES">
+        <attribute name="item" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Activity" positionX="-54" positionY="-9" width="128" height="148"/>
+        <element name="Vacation" positionX="-36" positionY="54" width="128" height="178"/>
+        <element name="Wishlist" positionX="-18" positionY="108" width="128" height="58"/>
+    </elements>
+</model>
