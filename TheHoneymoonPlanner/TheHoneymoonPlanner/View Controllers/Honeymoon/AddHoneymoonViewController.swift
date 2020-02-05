@@ -50,6 +50,10 @@ class AddHoneymoonViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func saveTapped(_ sender: Any) {
+    }
+    
+    
     @objc func startViewTapped(gestureRecognizer: UITapGestureRecognizer) {
         view.endEditing(true)
     }
