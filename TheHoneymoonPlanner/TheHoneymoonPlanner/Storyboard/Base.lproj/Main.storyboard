@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6ZU-US-iNW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pww-o6-tJW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
@@ -523,7 +523,7 @@ to drop pin</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="LcA-SH-xCd">
-                                <rect key="frame" x="20" y="96" width="374" height="711"/>
+                                <rect key="frame" x="20" y="52" width="374" height="804"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="um9-aF-M2T">
                                         <rect key="frame" x="0.0" y="0.0" width="200.5" height="243"/>
@@ -614,7 +614,7 @@ to drop pin</string>
                                         </constraints>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Kjq-tj-CJa">
-                                        <rect key="frame" x="0.0" y="393" width="374" height="318"/>
+                                        <rect key="frame" x="0.0" y="393" width="374" height="411"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <color key="separatorColor" red="0.90980392160000001" green="0.39607843139999999" blue="0.81960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
@@ -694,7 +694,7 @@ to drop pin</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="xaH-Yp-4RE">
-                                <rect key="frame" x="20" y="131" width="374" height="656"/>
+                                <rect key="frame" x="20" y="87" width="374" height="656"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Your Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wu4-HL-8Dd">
                                         <rect key="frame" x="0.0" y="0.0" width="154" height="20.5"/>
@@ -729,7 +729,7 @@ to drop pin</string>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyE-kg-ha5">
-                                <rect key="frame" x="360" y="138" width="34" height="30"/>
+                                <rect key="frame" x="360" y="94" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="Bbc-fl-chL" eventType="touchUpInside" id="ISf-ER-DS6"/>
@@ -1186,9 +1186,9 @@ to drop pin</string>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EbJ-FD-tZs"/>
+        <segue reference="bg4-2U-5EZ"/>
         <segue reference="Vvx-1a-hug"/>
-        <segue reference="6kK-6b-PrQ"/>
-        <segue reference="zrJ-A8-7M1"/>
+        <segue reference="JGY-d4-scp"/>
+        <segue reference="kBm-Xv-f13"/>
     </inferredMetricsTieBreakers>
 </document>

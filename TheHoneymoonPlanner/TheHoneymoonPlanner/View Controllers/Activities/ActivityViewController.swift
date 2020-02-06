@@ -149,11 +149,11 @@ class ActivityViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
-//        self.activityName = activityNameTextField.text ?? ""
-//        self.activityPrice = activityPriceTextField.text ?? ""
-//        self.activityDescription = activityDescriptionTextView.text ?? ""
-//        self.activityStart = startTextField.text ?? ""
-//        self.activityEnd = endTextField.text ?? ""
+        self.activityName = activityNameTextField.text ?? ""
+        self.activityPrice = activityPriceTextField.text ?? ""
+        self.activityDescription = activityDescriptionTextView.text ?? ""
+        self.activityStart = startTextField.text ?? ""
+        self.activityEnd = endTextField.text ?? ""
         saveActivityToCoreData()
         
         performSegue(withIdentifier: "SaveActivityAndShowDetailsSegue", sender: self)

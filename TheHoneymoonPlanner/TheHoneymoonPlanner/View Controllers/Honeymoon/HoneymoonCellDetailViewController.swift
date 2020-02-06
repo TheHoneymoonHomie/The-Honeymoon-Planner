@@ -38,6 +38,7 @@ class HoneymoonCellDetailViewController: UIViewController, UITableViewDelegate, 
         hCDVTableView.dataSource = self
         fetchActivities()
         fetchWishlistItems()
+        
         //sectionData = [0 : s1Data, 2 : s2Data]
     }
     
