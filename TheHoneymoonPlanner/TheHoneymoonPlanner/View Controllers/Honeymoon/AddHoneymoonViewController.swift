@@ -11,6 +11,7 @@ import CoreLocation
 import CoreData
 
 class AddHoneymoonViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
    
     // MARK: Properties
     private var startDatePicker: UIDatePicker?
@@ -33,10 +34,15 @@ class AddHoneymoonViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var costTextField: UITextField!
     @IBOutlet weak var vacationLocationLabel: UILabel!
     
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
     super.viewDidLoad()
     
+        tableView.delegate = self
+        tableView.dataSource = self
+        fetchWishlistItems()
+        
         startDatePicker = UIDatePicker()
         endDatePicker = UIDatePicker()
         startDatePicker?.datePickerMode = .dateAndTime
@@ -146,6 +152,40 @@ class AddHoneymoonViewController: UIViewController, UITableViewDelegate, UITable
         dateFormatter.timeStyle = .short
         
         endTextField.text = dateFormatter.string(from: datePicker.date)
+    }
+    
+    // MARK: Tableview Data Sources
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Wishlist Items"
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return wishlists.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+         let cell = tableView.dequeueReusableCell(withIdentifier: "ItemCell", for: indexPath)
+
+        let wishlist = wishlists[indexPath.row]
+        cell.textLabel?.text = wishlist.item
+
+               return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            
+            let wishlist = wishlists[indexPath.row]
+            CoreDataStack.context.delete(wishlist)
+            
+            CoreDataStack.saveContext()
+            fetchWishlistItems()
+        }
     }
     
     /*
