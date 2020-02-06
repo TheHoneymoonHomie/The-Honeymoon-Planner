@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreData
 
-class HoneymoonCellDetailViewController: UIViewController {
+class HoneymoonCellDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var wishlist: Wishlist?
     var wishlists: [Wishlist] = []
@@ -31,14 +31,27 @@ class HoneymoonCellDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         hCDVTableView.reloadData()
+        hCDVTableView.delegate = self
+        hCDVTableView.dataSource = self
+        fetchActivities()
+        fetchWishlistItems()
         //sectionData = [0 : s1Data, 2 : s2Data]
     }
     
     @IBAction func addActivityButtonPressed(_ sender: UIButton) {
+        
     }
     
     func fetchActivities() {
-        
+        let fetchRequest: NSFetchRequest<Activity> = Activity.fetchRequest()
+        do {
+            activities = try CoreDataStack.context.fetch(fetchRequest)
+            hCDVTableView.reloadData()
+            print(activities)
+            print(activities.count)
+        } catch {
+            print(error)
+        }
     }
     
     func fetchWishlistItems() {
@@ -66,13 +79,21 @@ class HoneymoonCellDetailViewController: UIViewController {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if sections.contains("Activities") {
+            activities.count
+
+        } else {
+            wishlists.count
+        }
+        
         return sections.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let activityCell = tableView.dequeueReusableCell(withIdentifier: "ActivityCell", for: indexPath) as? ActivityCustomTableViewCell else { return UITableViewCell() }
 
-        guard let wishlistCell = tableView.dequeueReusableCell(withIdentifier: "WishlistCell", for: indexPath) as? WishlistCustomTableViewCell else { return UITableViewCell() }
+        guard let wishlistCell = tableView.dequeueReusableCell(withIdentifier: "WishlistItemCell", for: indexPath) as? WishlistCustomTableViewCell else { return UITableViewCell() }
 
         // not sure if this is the right thing to check if
         //if sectionData == [0 : s1Data]
