@@ -515,7 +515,7 @@ to drop pin</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bgi-mv-Lpi">
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="bgi-mv-Lpi">
                                 <rect key="frame" x="20" y="64" width="372" height="768.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="um9-aF-M2T">
@@ -656,6 +656,9 @@ to drop pin</string>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bgi-mv-Lpi" firstAttribute="top" secondItem="elb-L8-jeY" secondAttribute="top" constant="40" id="9TJ-Ua-b91"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="elb-L8-jeY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Dgq-vc-ysx">
@@ -679,7 +682,6 @@ to drop pin</string>
                         <outlet property="imageView" destination="amF-fd-mWA" id="ca5-nS-5Fj"/>
                         <outlet property="selectLocationButton" destination="p8Y-MN-ovU" id="tRi-ae-HFu"/>
                         <outlet property="startTextField" destination="1mA-R7-M54" id="Cw4-OH-gzO"/>
-                        <outlet property="vacationLocation" destination="WAn-7R-UFh" id="8By-EM-mM5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQ3-zo-ci6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -734,7 +736,7 @@ to drop pin</string>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="Bbc-fl-chL" eventType="touchUpInside" id="ISf-ER-DS6"/>
-                                    <segue destination="yHn-nB-fBa" kind="show" identifier="SaveHoneymoonToCollectionVCSegue" id="jVR-Ne-5gJ"/>
+                                    <segue destination="oNV-pW-3Yt" kind="show" identifier="SaveBackToAddHoneymoonVCSegue" id="JGY-d4-scp"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1176,7 +1178,7 @@ to drop pin</string>
     <inferredMetricsTieBreakers>
         <segue reference="tKb-8w-1RW"/>
         <segue reference="Vvx-1a-hug"/>
-        <segue reference="s9J-xp-EKF"/>
+        <segue reference="JGY-d4-scp"/>
         <segue reference="kBm-Xv-f13"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -65,17 +65,23 @@ class AddHoneymoonLocationViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "SaveBackToAddHoneymoonVCSegue", sender: self)
+            guard let pressedLocation = pressedLocation else { return }
+            let vacationLocationTitle = addLocationTextField.text
+        CoreDataStack.saveContext()
+        print(pressedLocation)
+        print(vacationLocationTitle)
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
-        if segue.identifier == "SaveBackToAddHoneymoonVCSegue" {
-            guard let destinationVC = segue.destination as? AddHoneymoonViewController,
-                let pressedLocation = pressedLocation else { return }
-            let vacationLocationTitle = addLocationTextField.text
-            destinationVC.vacationLocation = pressedLocation
-            destinationVC.vacationLocationLabel.text = vacationLocationTitle
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
+//        if segue.identifier == "SaveBackToAddHoneymoonVCSegue" {
+//            guard let destinationVC = segue.destination as? AddHoneymoonViewController,
+//                let pressedLocation = pressedLocation else { return }
+//            let vacationLocationTitle = addLocationTextField.text
+//            destinationVC.vacationLocation = pressedLocation
+//            destinationVC.vacationLocationLabel.text = vacationLocationTitle
+//        }
+//    }
 
 }

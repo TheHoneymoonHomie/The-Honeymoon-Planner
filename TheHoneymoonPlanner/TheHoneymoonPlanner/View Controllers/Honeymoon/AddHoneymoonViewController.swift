@@ -10,13 +10,16 @@ import UIKit
 import CoreLocation
 import CoreData
 
-class AddHoneymoonViewController: UIViewController {
+class AddHoneymoonViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     // MARK: Properties
     private var startDatePicker: UIDatePicker?
     private var endDatePicker: UIDatePicker?
     var vacationLocation: CLLocation?
+    
     var vacationLocationTitle: String?
+    var wishlist: Wishlist?
+    var wishlists: [Wishlist] = []
     
     // MARK: Outlets
     @IBOutlet weak var honeymoonNameTextField: UITextField!
@@ -99,6 +102,23 @@ class AddHoneymoonViewController: UIViewController {
         vacation.location = vacationLocationLabel.text
         
         CoreDataStack.saveContext()
+    }
+    
+    func fetchWishlistItems() {
+           
+           let fetchRequest: NSFetchRequest<Wishlist> = Wishlist.fetchRequest()
+           do {
+               wishlists = try CoreDataStack.context.fetch(fetchRequest)
+               tableView.reloadData()
+               print(wishlists)
+               print(wishlists.count)
+           } catch {
+               print(error)
+           }
+       }
+    
+    func fetchVacationLocationTitleAndPressedLocation() {
+        
     }
     
     
