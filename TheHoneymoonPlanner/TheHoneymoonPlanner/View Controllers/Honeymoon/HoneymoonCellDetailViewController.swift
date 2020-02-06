@@ -6,6 +6,11 @@
 //  Copyright © 2020 Jonalynn Masters. All rights reserved.
 //
 
+enum headerType: String {
+    case ac = "Activities"
+    case wl = "Wishlist"
+}
+
 import UIKit
 import MapKit
 import CoreData
@@ -99,16 +104,33 @@ class HoneymoonCellDetailViewController: UIViewController, UITableViewDelegate, 
         //if sectionData == [0 : s1Data]
         //if sectionData.capacity == 0
         
-        if sections.contains("Activities") {
+//        switch sections.contains(headerType) {
+//        case <#pattern#>:
+//            <#code#>
+//        default:
+//            <#code#>
+//        }
+        
+        if indexPath.section == 0 {
             return activityCell
-
-        } else if sections.contains("Wishlist") {
-            let wishlist = wishlists[indexPath.row]
-            wishlistCell.textLabel?.text = wishlist.item
-            return wishlistCell
         } else {
-            return UITableViewCell()
+            return wishlistCell
         }
+       
+        
+//        if sections.contains("Activities") {
+//            return activityCell
+//
+//        } else {
+//            return UITableViewCell() }
+//
+//        if sections.contains("Wishlist") {
+//            let wishlist = wishlists[indexPath.row]
+//            wishlistCell.textLabel?.text = wishlist.item
+//            return wishlistCell
+//        } else {
+//            return UITableViewCell()
+//        }
 
     }
     

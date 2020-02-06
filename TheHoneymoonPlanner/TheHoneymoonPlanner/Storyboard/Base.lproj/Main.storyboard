@@ -1083,6 +1083,8 @@ to drop pin</string>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="activityNameLable" destination="1oP-9l-hMk" id="EDm-Q1-JyJ"/>
+                                            <outlet property="activityPriceLabel" destination="mmR-dn-PTJ" id="Qfa-ES-FRR"/>
                                             <segue destination="735-zR-IX3" kind="show" identifier="ActivityDetailViewSegue" id="zrJ-A8-7M1"/>
                                         </connections>
                                     </tableViewCell>
