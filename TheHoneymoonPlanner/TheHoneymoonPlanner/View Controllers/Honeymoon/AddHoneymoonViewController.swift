@@ -108,7 +108,7 @@ class AddHoneymoonViewController: UIViewController, UITableViewDelegate, UITable
         let latitude = Double(vacationLocation.coordinate.latitude)
         let longitude = Double(vacationLocation.coordinate.longitude)
         
-        vacation.cost = costTextField.text as? Double ?? 0.00
+//        vacation.cost = costTextField.text as? Double ?? 0.00
         // TODO: FIX THIS
         vacation.date_end = nil
         vacation.date_start = nil
