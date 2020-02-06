@@ -37,6 +37,10 @@ class HoneymoonCellDetailViewController: UIViewController {
     @IBAction func addActivityButtonPressed(_ sender: UIButton) {
     }
     
+    func fetchActivities() {
+        
+    }
+    
     func fetchWishlistItems() {
         
         let fetchRequest: NSFetchRequest<Wishlist> = Wishlist.fetchRequest()
