@@ -10,6 +10,10 @@ import UIKit
 
 class WishlistCustomTableViewCell: UITableViewCell {
     
+    var wishlist: Wishlist?
+    var wishlists: [Wishlist] = []
+    
+    @IBOutlet weak var wishlistItemLabel: UILabel!
     
 
     override func awakeFromNib() {
@@ -17,6 +21,9 @@ class WishlistCustomTableViewCell: UITableViewCell {
         // Initialization code
     }
 
+    @IBAction func wishlistChecked(_ sender: UISwitch) {
+        
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

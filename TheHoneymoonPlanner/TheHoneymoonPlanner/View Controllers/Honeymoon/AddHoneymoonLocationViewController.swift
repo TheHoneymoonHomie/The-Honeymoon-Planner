@@ -1,41 +1,35 @@
 //
-//  AddActivityMapViewController.swift
+//  AddHoneymoonLocationViewController.swift
 //  TheHoneymoonPlanner
 //
-//  Created by Jerry haaser on 2/3/20.
+//  Created by Jerry haaser on 2/5/20.
 //  Copyright © 2020 Jonalynn Masters. All rights reserved.
 //
 
 import UIKit
-import CoreLocation
-import CoreData
 import MapKit
+import CoreLocation
 
-class AddActivityMapViewController: UIViewController {
-    
-    var wishlist: Wishlist?
-    var wishlists: [Wishlist] = []
-    var activty: Activity?
-    var activities: [Activity] = []
+class AddHoneymoonLocationViewController: UIViewController {
     
     var pressedLocation:CLLocation? = nil {
         didSet{
-            continueButton.isEnabled = true
-            continueButton.isHighlighted = true
+            saveButton.isEnabled = true
+            saveButton.isHighlighted = true
             print("pressedLocation was set")
         }
     }
-    var activityLocationTitle: String?
+    var vacationLocationTitle: String?
     
-    @IBOutlet weak var continueButton: UIButton!
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var addLocationTextField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
+    
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
                 let location = CLLocationCoordinate2D(latitude: 33.812794,
                                                       longitude: -117.9190981)
                 
@@ -70,28 +64,27 @@ class AddActivityMapViewController: UIViewController {
                 }
     }
     
-    @IBAction func continueButtonTapped(_ sender: UIButton) {
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
             guard let pressedLocation = pressedLocation else { return }
-            //let actionLocationTitle = addLocationTextField.text
+            let vacationLocationTitle = addLocationTextField.text
         CoreDataStack.saveContext()
         print(pressedLocation)
-        //print(vacationLocationTitle)
-        
-        //TODO: This should not popViewController but continue on to next view controller
+        print(vacationLocationTitle)
         self.navigationController?.popViewController(animated: true)
+        
     }
     
-    @IBAction func cancelButtonTapped(_ sender: UIButton) {
-        self.navigationController?.popViewController(animated: true)
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    //TODO: Test This again
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
+//        if segue.identifier == "SaveBackToAddHoneymoonVCSegue" {
+//            guard let destinationVC = segue.destination as? AddHoneymoonViewController,
+//                let pressedLocation = pressedLocation else { return }
+//            let vacationLocationTitle = addLocationTextField.text
+//            destinationVC.vacationLocation = pressedLocation
+//            destinationVC.vacationLocationLabel.text = vacationLocationTitle
+//        }
+//    }
 
 }

@@ -10,6 +10,11 @@ import UIKit
 
 class ActivityCustomTableViewCell: UITableViewCell {
 
+    var activity: Activity?
+    var activities: [Activity] = []
+    
+    @IBOutlet weak var activityNameLable: UILabel!
+    @IBOutlet weak var activityPriceLabel: UILabel!
     
     
     override func awakeFromNib() {

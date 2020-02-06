@@ -1,27 +1,22 @@
 //
-//  AddHoneymoonViewController.swift
+//  AddhoneyMoonCellViewController.swift
 //  TheHoneymoonPlanner
 //
-//  Created by Brandi Bailey on 2/2/20.
+//  Created by Jerry haaser on 2/5/20.
 //  Copyright © 2020 Jonalynn Masters. All rights reserved.
 //
 
 import UIKit
 
-class AddHoneymoonViewController: UIViewController {
+class AddhoneyMoonCellViewController: UIViewController {
 
-    @IBOutlet weak var selectLocationButton: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func cancelTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
+
     /*
     // MARK: - Navigation
 

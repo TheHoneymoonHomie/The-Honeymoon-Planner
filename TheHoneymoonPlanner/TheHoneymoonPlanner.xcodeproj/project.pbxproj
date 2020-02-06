@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C765EBB23EA8C0100478262 /* HoneymoonCustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C765EBA23EA8C0100478262 /* HoneymoonCustomCollectionViewCell.swift */; };
+		1C765EBF23EA949100478262 /* AddhoneyMoonCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C765EBE23EA949100478262 /* AddhoneyMoonCellViewController.swift */; };
+		1C765EC123EB46D500478262 /* AddHoneymoonLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C765EC023EB46D500478262 /* AddHoneymoonLocationViewController.swift */; };
 		1CFB392123E8D64B008674FE /* AddActivityMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFB392023E8D64B008674FE /* AddActivityMapViewController.swift */; };
 		1CFB392523E8D6A0008674FE /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFB392423E8D6A0008674FE /* ActivityDetailViewController.m */; };
 		1CFB392A23E8DAB4008674FE /* ActivityCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFB392923E8DAB4008674FE /* ActivityCustomTableViewCell.swift */; };
@@ -39,6 +42,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C765EBA23EA8C0100478262 /* HoneymoonCustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneymoonCustomCollectionViewCell.swift; sourceTree = "<group>"; };
+		1C765EBE23EA949100478262 /* AddhoneyMoonCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddhoneyMoonCellViewController.swift; sourceTree = "<group>"; };
+		1C765EC023EB46D500478262 /* AddHoneymoonLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHoneymoonLocationViewController.swift; sourceTree = "<group>"; };
 		1CFB392023E8D64B008674FE /* AddActivityMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivityMapViewController.swift; sourceTree = "<group>"; };
 		1CFB392223E8D69F008674FE /* TheHoneymoonPlanner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TheHoneymoonPlanner-Bridging-Header.h"; sourceTree = "<group>"; };
 		1CFB392323E8D6A0008674FE /* ActivityDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActivityDetailViewController.h; sourceTree = "<group>"; };
@@ -85,9 +91,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C11368923EBCFEA00DB24C6 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A978A23E4F5DB00AD3BC3 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 		1CFB392D23E8DAD6008674FE /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				1C765EBA23EA8C0100478262 /* HoneymoonCustomCollectionViewCell.swift */,
 				1CFB392923E8DAB4008674FE /* ActivityCustomTableViewCell.swift */,
 				1CFB392B23E8DACB008674FE /* WishlistCustomTableViewCell.swift */,
 			);
@@ -133,7 +148,7 @@
 				4F1A978623E4F5DB00AD3BC3 /* SceneDelegate.swift */,
 				85A4DD4823E795BF001B7A2A /* Data */,
 				4F1A978423E4F5DB00AD3BC3 /* AppDelegate.swift */,
-				4F1A978A23E4F5DB00AD3BC3 /* Main.storyboard */,
+				1C11368923EBCFEA00DB24C6 /* Storyboard */,
 				1CFB393823E8F45C008674FE /* Convenience */,
 				4F1A978D23E4F5E000AD3BC3 /* Assets.xcassets */,
 				4F1A978F23E4F5E000AD3BC3 /* LaunchScreen.storyboard */,
@@ -149,7 +164,6 @@
 			children = (
 				1CFB392023E8D64B008674FE /* AddActivityMapViewController.swift */,
 				4F1A97A223E5054F00AD3BC3 /* ActivityViewController.swift */,
-				85A4DD5F23E7CA2E001B7A2A /* AddHoneymoonViewController.swift */,
 				1CFB392323E8D6A0008674FE /* ActivityDetailViewController.h */,
 				1CFB392423E8D6A0008674FE /* ActivityDetailViewController.m */,
 			);
@@ -184,8 +198,11 @@
 		8567816F23EA3E5900580A4C /* Honeymoon */ = {
 			isa = PBXGroup;
 			children = (
+				85A4DD5F23E7CA2E001B7A2A /* AddHoneymoonViewController.swift */,
 				4F1A979823E4F84200AD3BC3 /* HoneymoonCollectionViewController.swift */,
 				4F1A97A023E5018E00AD3BC3 /* HoneymoonCellDetailViewController.swift */,
+				1C765EBE23EA949100478262 /* AddhoneyMoonCellViewController.swift */,
+				1C765EC023EB46D500478262 /* AddHoneymoonLocationViewController.swift */,
 			);
 			path = Honeymoon;
 			sourceTree = "<group>";
@@ -287,6 +304,7 @@
 				1CFB392A23E8DAB4008674FE /* ActivityCustomTableViewCell.swift in Sources */,
 				851BB58623EA479C00F4C0E6 /* Activity+CoreDataClass.swift in Sources */,
 				4F1A979923E4F84200AD3BC3 /* HoneymoonCollectionViewController.swift in Sources */,
+				1C765EBF23EA949100478262 /* AddhoneyMoonCellViewController.swift in Sources */,
 				4F1A978523E4F5DB00AD3BC3 /* AppDelegate.swift in Sources */,
 				1CFB392C23E8DACB008674FE /* WishlistCustomTableViewCell.swift in Sources */,
 				4F1A979F23E4FC5200AD3BC3 /* AddBudgetViewController.swift in Sources */,
@@ -299,12 +317,14 @@
 				4F1A97A123E5018E00AD3BC3 /* HoneymoonCellDetailViewController.swift in Sources */,
 				1CFB392123E8D64B008674FE /* AddActivityMapViewController.swift in Sources */,
 				851BB58923EA479C00F4C0E6 /* Vacation+CoreDataProperties.swift in Sources */,
+				1C765EBB23EA8C0100478262 /* HoneymoonCustomCollectionViewCell.swift in Sources */,
 				1CFB392523E8D6A0008674FE /* ActivityDetailViewController.m in Sources */,
 				4F1A979D23E4F9CC00AD3BC3 /* DiscoverViewController.swift in Sources */,
 				85A4DD6023E7CA2E001B7A2A /* AddHoneymoonViewController.swift in Sources */,
 				85A4DD7523E87FD3001B7A2A /* AddWishlistItemViewController.swift in Sources */,
 				1CFB392F23E8EB06008674FE /* Activity+Convenience.swift in Sources */,
 				85A4DD4A23E79660001B7A2A /* CoreDataStack.swift in Sources */,
+				1C765EC123EB46D500478262 /* AddHoneymoonLocationViewController.swift in Sources */,
 				851BB58523EA479C00F4C0E6 /* Wishlist+CoreDataProperties.swift in Sources */,
 				851BB58723EA479C00F4C0E6 /* Activity+CoreDataProperties.swift in Sources */,
 				4F1A979B23E4F99B00AD3BC3 /* SettingsViewController.swift in Sources */,
@@ -455,13 +475,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UF4PHTK7P6;
+				DEVELOPMENT_TEAM = BHPNM53Q62;
 				INFOPLIST_FILE = TheHoneymoonPlanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jonalynnMasters.TheHoneymoonPlanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonalynnmasters.TheHoneymoonPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheHoneymoonPlanner/View Controllers/TheHoneymoonPlanner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -476,13 +496,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UF4PHTK7P6;
+				DEVELOPMENT_TEAM = BHPNM53Q62;
 				INFOPLIST_FILE = TheHoneymoonPlanner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jonalynnMasters.TheHoneymoonPlanner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonalynnmasters.TheHoneymoonPlanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "TheHoneymoonPlanner/View Controllers/TheHoneymoonPlanner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

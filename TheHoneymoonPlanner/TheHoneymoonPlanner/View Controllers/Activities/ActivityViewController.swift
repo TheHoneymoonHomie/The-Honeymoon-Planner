@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import CoreLocation
+import CoreData
+
+//#import ActivityDetailViewController.h
 
 class ActivityViewController: UIViewController {
     
@@ -18,8 +22,20 @@ class ActivityViewController: UIViewController {
     
     @IBOutlet weak var endTextField: UITextField!
     
+    var wishlist: Wishlist?
+    var wishlists: [Wishlist] = []
+    var activity: Activity?
+    var activities: [Activity] = []
+    
+    var activityName = ""
+    var activityPrice = ""
+    var activityDescription = ""
+    var activityStart = ""
+    var activityEnd = ""
+    
     private var startDatePicker: UIDatePicker?
     private var endDatePicker: UIDatePicker?
+    var activityLocation: CLLocation?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,12 +57,67 @@ class ActivityViewController: UIViewController {
             view.addGestureRecognizer(endTapGesture)
             endTextField.inputView = endDatePicker
         }
-        // Do any additional setup after loading the view.
-    
-    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+/*
+    func saveVacationToCoreData() {
+        
+        let imageURL = { () -> URL in
+            let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+            
+            let formatter = ISO8601DateFormatter()
+            formatter.formatOptions = [.withInternetDateTime]
+            
+            let name = formatter.string(from: Date())
+            let fileURL = documentsDirectory.appendingPathComponent(name).appendingPathExtension("jpg")
+            
+            return fileURL
+        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+        
+        let vacation = Vacation(context: CoreDataStack.context)
+        
+        guard let vacationLocation = self.vacationLocation else { return }
+        
+        let latitude = Double(vacationLocation.coordinate.latitude)
+        let longitude = Double(vacationLocation.coordinate.longitude)
+        
+        vacation.cost = costTextField.text as? Double ?? 0.00
+        // TODO: FIX THIS
+        vacation.date_end = nil
+        vacation.date_start = nil
+        vacation.imageURL = imageURL()
+        vacation.latitude = latitude
+       // vacation.location = vacationLocation
+        vacation.longitude = longitude
+        vacation.title = honeymoonNameTextField.text
+        vacation.location = vacationLocationLabel.text
+        
+        CoreDataStack.saveContext()
     }
-    
-    @IBAction func saveButtonTapped(_ sender: UIButton) {
+*/
+    func saveActivityToCoreData() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .short
+//        guard let startTextField.text = dateFormatter.string(from: startDatePicker.date) else { return dateFormatter.}
+//        endTextField.text = dateFormatter.string(from: endDatePicker?.date)
+        
+        guard let activityLocation = self.activityLocation else { return }
+        
+        let latitude = Double(activityLocation.coordinate.latitude)
+        let longitude = Double(activityLocation.coordinate.longitude)
+        
+        activity?.act_cost = activityPriceTextField.text as? Double ?? 0.00
+        activity?.act_date_end = nil
+        activity?.act_date_start = nil
+        activity?.act_latitude = latitude
+        activity?.act_longitude = longitude
+        activity?.name = activityNameTextField.text
+        //ativity.vacation = ?
+        CoreDataStack.saveContext()
+        
     }
     
     @objc func startViewTapped(gestureRecognizer: UITapGestureRecognizer) {
@@ -72,16 +143,33 @@ class ActivityViewController: UIViewController {
         
         endTextField.text = dateFormatter.string(from: datePicker.date)
     }
+        // Do any additional setup after loading the view.
+    
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        self.activityName = activityNameTextField.text ?? ""
+        self.activityPrice = activityPriceTextField.text ?? ""
+        self.activityDescription = activityDescriptionTextView.text ?? ""
+        self.activityStart = startTextField.text ?? ""
+        self.activityEnd = endTextField.text ?? ""
+        saveActivityToCoreData()
+        
+        performSegue(withIdentifier: "SaveActivityAndShowDetailsSegue", sender: self)
+    }
+    
+
+    
 
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    //override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    //    var vc = segue.destination as! ActivityDetailViewController
+    //}
+    
 
 }
