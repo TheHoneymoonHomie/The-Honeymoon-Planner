@@ -6,11 +6,6 @@
 //  Copyright © 2020 Jonalynn Masters. All rights reserved.
 //
 
-enum headerType: String {
-    case ac = "Activities"
-    case wl = "Wishlist"
-}
-
 import UIKit
 import MapKit
 import CoreData
@@ -21,6 +16,9 @@ class HoneymoonCellDetailViewController: UIViewController, UITableViewDelegate, 
     var wishlists: [Wishlist] = []
     var activty: Activity?
     var activities: [Activity] = []
+    
+    var wishlistCustomCell = WishlistCustomTableViewCell()
+    var activityCustomCell = ActivityCustomTableViewCell()
     
     let sections: [String] = ["Activities", "Wishlist"]
     //This is wrong I'm sure
@@ -85,14 +83,15 @@ class HoneymoonCellDetailViewController: UIViewController, UITableViewDelegate, 
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        if sections.contains("Activities") {
-            activities.count
-
-        } else {
-            wishlists.count
-        }
+        switch (section) {
+            case 0:
+               return activities.count
+            case 1:
+               return wishlists.count
+            default:
+               return 1
+         }
         
-        return sections.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,37 +99,20 @@ class HoneymoonCellDetailViewController: UIViewController, UITableViewDelegate, 
 
         guard let wishlistCell = tableView.dequeueReusableCell(withIdentifier: "WishlistItemCell", for: indexPath) as? WishlistCustomTableViewCell else { return UITableViewCell() }
 
-        // not sure if this is the right thing to check if
-        //if sectionData == [0 : s1Data]
-        //if sectionData.capacity == 0
-        
-//        switch sections.contains(headerType) {
-//        case <#pattern#>:
-//            <#code#>
-//        default:
-//            <#code#>
-//        }
-        
+        // TODO: This should fill the sections with the array of stuff
         if indexPath.section == 0 {
-            return activityCell
+            if activities.count == 0 {
+                return UITableViewCell()
+            } else {
+//            let anActivity = activities[indexPath.row]
+//            activityCustomCell.activityNameLable.text = anActivity.name
+                return activityCell }
         } else {
+            let wishlist = wishlists[indexPath.row]
+            
+            wishlistCustomCell.wishlistItemLabel?.text = wishlist.item
             return wishlistCell
         }
-       
-        
-//        if sections.contains("Activities") {
-//            return activityCell
-//
-//        } else {
-//            return UITableViewCell() }
-//
-//        if sections.contains("Wishlist") {
-//            let wishlist = wishlists[indexPath.row]
-//            wishlistCell.textLabel?.text = wishlist.item
-//            return wishlistCell
-//        } else {
-//            return UITableViewCell()
-//        }
 
     }
     
