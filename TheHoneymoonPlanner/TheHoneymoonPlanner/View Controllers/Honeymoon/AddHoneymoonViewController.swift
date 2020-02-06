@@ -43,6 +43,18 @@ class AddHoneymoonViewController: UIViewController, UITableViewDelegate, UITable
         tableView.dataSource = self
         fetchWishlistItems()
         
+        loadDatePicker()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        vacationLocationLabel.text = vacationLocationTitle
+        print("VactaionLocationTitle from AddHonemoonVC: \(vacationLocationTitle)")
+        print(vacationLocation)
+    }
+    
+    func loadDatePicker() {
         startDatePicker = UIDatePicker()
         endDatePicker = UIDatePicker()
         startDatePicker?.datePickerMode = .dateAndTime
@@ -65,7 +77,7 @@ class AddHoneymoonViewController: UIViewController, UITableViewDelegate, UITable
     @IBAction func addPhotoButtonTapped(_ sender: Any) {
     }
     @IBAction func cancelTapped(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func saveTapped(_ sender: Any) {
@@ -105,7 +117,7 @@ class AddHoneymoonViewController: UIViewController, UITableViewDelegate, UITable
        // vacation.location = vacationLocation
         vacation.longitude = longitude
         vacation.title = honeymoonNameTextField.text
-        vacation.location = vacationLocationLabel.text
+//        vacation.location = vacationLocationLabel.text
         
         CoreDataStack.saveContext()
     }
