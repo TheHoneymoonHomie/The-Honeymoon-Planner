@@ -14,14 +14,13 @@ class AddHoneymoonLocationViewController: UIViewController {
     
     var pressedLocation:CLLocation? = nil {
         didSet{
-            saveButton.isEnabled = true
-            saveButton.isHighlighted = true
+//            saveButton.isEnabled = true
+//            saveButton.isHighlighted = true
             print("pressedLocation was set")
         }
     }
     var vacationLocationTitle: String?
     
-    @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var addLocationTextField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
     
@@ -64,27 +63,23 @@ class AddHoneymoonLocationViewController: UIViewController {
                 }
     }
     
-    @IBAction func saveButtonTapped(_ sender: UIButton) {
-            guard let pressedLocation = pressedLocation else { return }
-            let vacationLocationTitle = addLocationTextField.text
-        CoreDataStack.saveContext()
-        print(pressedLocation)
-        print(vacationLocationTitle)
-        self.navigationController?.popViewController(animated: true)
+    
+    @IBAction func nextTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "ToHoneymoonDetailsSegue", sender: self)
         
     }
-    
     //TODO: Test This again
     
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
-//        if segue.identifier == "SaveBackToAddHoneymoonVCSegue" {
-//            guard let destinationVC = segue.destination as? AddHoneymoonViewController,
-//                let pressedLocation = pressedLocation else { return }
-//            let vacationLocationTitle = addLocationTextField.text
-//            destinationVC.vacationLocation = pressedLocation
-//            destinationVC.vacationLocationLabel.text = vacationLocationTitle
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)  {
+        if segue.identifier == "ToHoneymoonDetailsSegue" {
+            guard let destinationVC = segue.destination as? AddHoneymoonViewController,
+            let pressedLocation = pressedLocation else { return }
+            let vacationLocationTitle = addLocationTextField.text
+            destinationVC.vacationLocation = pressedLocation
+            destinationVC.vacationLocationTitle = vacationLocationTitle
+            print("VacationLocationTitle: \(vacationLocationTitle)")
+        }
+    }
 
 }
