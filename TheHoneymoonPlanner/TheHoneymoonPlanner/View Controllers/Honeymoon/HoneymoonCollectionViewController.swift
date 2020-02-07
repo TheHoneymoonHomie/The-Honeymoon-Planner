@@ -31,11 +31,15 @@ class HoneymoonCollectionViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView?.reloadData()
+    }
 
     func fetchVacationFromCoreData() {
         let fetchRequest: NSFetchRequest<Vacation> = Vacation.fetchRequest()
                do {
-//                   vacations = try CoreDataStack.context.fetch(fetchRequest)
+ //                  vacations = try CoreDataStack.context.fetch(fetchRequest)
                    print(vacations)
                } catch {
                    print(error)
@@ -59,7 +63,6 @@ class HoneymoonCollectionViewController: UICollectionViewController {
         
         //UPDate this to activityController or whatever
         return activities.count
-        
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
