@@ -20,9 +20,11 @@ class WishlistController {
         saveToPersistentStore()
     }
     
-    func update(_ wishlist: Wishlist, with itemName: String) {
+    func update(_ wishlist: Wishlist, with itemName: String, isSelected: Bool = false) {
         
         wishlist.item = itemName
+        wishlist.isSelected = isSelected
+        
         saveToPersistentStore()
     }
     
