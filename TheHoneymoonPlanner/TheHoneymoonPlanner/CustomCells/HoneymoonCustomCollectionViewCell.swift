@@ -35,7 +35,7 @@ class HoneymoonCustomCollectionViewCell: UICollectionViewCell {
         
             //TODO: change all this
             imageView.image = nil
-            vacationNameLabel.text = ""
+            vacationNameLabel.text = "Something Here"
             wishlistLabel.text = "Wishlist Check Count"
             priceLabel.text = ""
         }
@@ -45,9 +45,9 @@ class HoneymoonCustomCollectionViewCell: UICollectionViewCell {
             imageView.image = image
         }
 
-//        var post: Post? {
-//            didSet {
-//                updateViews()
-//            }
-//        }
+        var vacation: Vacation? {
+            didSet {
+                updateViews()
+            }
+        }
 }
