@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C27495F23EDBC3C00D01555 /* VacationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27495E23EDBC3C00D01555 /* VacationController.swift */; };
 		1C765EBB23EA8C0100478262 /* HoneymoonCustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C765EBA23EA8C0100478262 /* HoneymoonCustomCollectionViewCell.swift */; };
 		1C765EBF23EA949100478262 /* AddhoneyMoonCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C765EBE23EA949100478262 /* AddhoneyMoonCellViewController.swift */; };
 		1C765EC123EB46D500478262 /* AddHoneymoonLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C765EC023EB46D500478262 /* AddHoneymoonLocationViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C27495E23EDBC3C00D01555 /* VacationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationController.swift; sourceTree = "<group>"; };
 		1C765EBA23EA8C0100478262 /* HoneymoonCustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneymoonCustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		1C765EBE23EA949100478262 /* AddhoneyMoonCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddhoneyMoonCellViewController.swift; sourceTree = "<group>"; };
 		1C765EC023EB46D500478262 /* AddHoneymoonLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHoneymoonLocationViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				85E6714123ECCDF600DD7EEC /* WishlistController.swift */,
+				1C27495E23EDBC3C00D01555 /* VacationController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				1CFB392A23E8DAB4008674FE /* ActivityCustomTableViewCell.swift in Sources */,
 				4F1A979923E4F84200AD3BC3 /* HoneymoonCollectionViewController.swift in Sources */,
 				1C765EBF23EA949100478262 /* AddhoneyMoonCellViewController.swift in Sources */,
+				1C27495F23EDBC3C00D01555 /* VacationController.swift in Sources */,
 				4F1A978523E4F5DB00AD3BC3 /* AppDelegate.swift in Sources */,
 				1CFB392C23E8DACB008674FE /* WishlistCustomTableViewCell.swift in Sources */,
 				4F1A979F23E4FC5200AD3BC3 /* AddBudgetViewController.swift in Sources */,
