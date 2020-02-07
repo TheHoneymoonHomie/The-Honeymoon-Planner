@@ -109,13 +109,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="S9y-TJ-7QZ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Wzh-FG-j6l">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="WRu-g6-Ovj">
-                            <connections>
-                                <segue destination="Bbc-fl-chL" kind="show" identifier="AddHoneymoonSegue" id="Z6a-fa-1H9"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="Wzh-FG-j6l"/>
                     <connections>
                         <outlet property="addWishlistItemButton" destination="j6f-2z-zxs" id="fqJ-R5-3Bo"/>
                         <outlet property="budgetAmountLabel" destination="BJD-Vh-c1n" id="kPe-R3-6xA"/>
@@ -125,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8Q-ke-u37" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-644.92753623188412" y="332.8125"/>
+            <point key="canvasLocation" x="-736" y="333"/>
         </scene>
         <!--Add Budget-->
         <scene sceneID="rIN-f4-M1B">
@@ -344,7 +338,7 @@ to drop pin</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acitvity Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RO-6k-kMv">
-                                <rect key="frame" x="20" y="50" width="111" height="20.5"/>
+                                <rect key="frame" x="20" y="99" width="111" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="9oh-dM-reE"/>
                                 </constraints>
@@ -353,13 +347,13 @@ to drop pin</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Activity Cost:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBK-6i-g1A">
-                                <rect key="frame" x="20" y="95.5" width="104.5" height="21"/>
+                                <rect key="frame" x="20" y="144.5" width="104.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8eO-Am-Kqh">
-                                <rect key="frame" x="20" y="257" width="374" height="556"/>
+                                <rect key="frame" x="20" y="306" width="374" height="556"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="556" id="c7b-3p-kag"/>
@@ -369,7 +363,7 @@ to drop pin</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-JL-bAk">
-                                <rect key="frame" x="360" y="-5.5" width="34" height="30"/>
+                                <rect key="frame" x="360" y="43.5" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="QiA-cX-NnG" eventType="touchUpInside" id="wfe-LC-9Sc"/>
@@ -377,7 +371,7 @@ to drop pin</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpq-EQ-evF">
-                                <rect key="frame" x="20" y="-5" width="48" height="30"/>
+                                <rect key="frame" x="20" y="44" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelButtonTapped:" destination="QiA-cX-NnG" eventType="touchUpInside" id="U0l-sR-qMe"/>
@@ -385,17 +379,17 @@ to drop pin</string>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uxj-83-k1m">
-                                <rect key="frame" x="139" y="88" width="268" height="36"/>
+                                <rect key="frame" x="139" y="137" width="268" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pDp-Wk-3cw">
-                                <rect key="frame" x="139" y="43.5" width="268" height="33.5"/>
+                                <rect key="frame" x="139" y="92.5" width="268" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="np5-Ti-oYX" userLabel="startTextField">
-                                <rect key="frame" x="139" y="136" width="268" height="32"/>
+                                <rect key="frame" x="139" y="185" width="268" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -409,7 +403,7 @@ to drop pin</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Activity Start:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="end-nb-pjI" userLabel="Avtivity Start">
-                                <rect key="frame" x="20" y="141.5" width="104.5" height="21"/>
+                                <rect key="frame" x="20" y="190.5" width="104.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103.5" id="7gi-wT-yO2"/>
                                     <constraint firstAttribute="height" constant="21" id="dcP-a2-UrR"/>
@@ -419,18 +413,18 @@ to drop pin</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Activity Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-dx-Wvr">
-                                <rect key="frame" x="20" y="219" width="210" height="30"/>
+                                <rect key="frame" x="20" y="268" width="210" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YOR-wc-xPp" userLabel="endTextField">
-                                <rect key="frame" x="139" y="176" width="268" height="35"/>
+                                <rect key="frame" x="139" y="225" width="268" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Activity End:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgl-Cj-pBC">
-                                <rect key="frame" x="20" y="183" width="111" height="21"/>
+                                <rect key="frame" x="20" y="232" width="111" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -565,7 +559,7 @@ to drop pin</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TSn-be-e5r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1851" y="2577"/>
+            <point key="canvasLocation" x="-454" y="2468"/>
         </scene>
         <!--Add Honeymoon View Controller-->
         <scene sceneID="sA4-I8-M9n">
@@ -703,8 +697,7 @@ to drop pin</string>
                     <navigationItem key="navigationItem" id="Dgq-vc-ysx">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="cTZ-nz-c95">
                             <connections>
-                                <action selector="saveTapped:" destination="oNV-pW-3Yt" id="1FG-4N-Uj1"/>
-                                <segue destination="yHn-nB-fBa" kind="show" identifier="SaveButtonSegueToCollectionView" id="Vvx-1a-hug"/>
+                                <action selector="saveTapped:" destination="oNV-pW-3Yt" id="rEb-nj-lFz"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -720,7 +713,7 @@ to drop pin</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CQ3-zo-ci6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="993" y="333"/>
+            <point key="canvasLocation" x="1971" y="1094"/>
         </scene>
         <!--Add Honeymoon Location View Controller-->
         <scene sceneID="BLw-xO-imy">
@@ -788,7 +781,7 @@ to drop pin</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zie-e2-5zc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="199" y="333"/>
+            <point key="canvasLocation" x="1116" y="1094"/>
         </scene>
         <!--Honeymoon Collection View Controller-->
         <scene sceneID="wpB-tD-TJe">
@@ -923,7 +916,7 @@ to drop pin</string>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmh-cC-Au4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="96" y="1093"/>
+            <point key="canvasLocation" x="236" y="1094"/>
         </scene>
         <!--Discover-->
         <scene sceneID="KtV-Ow-3wl">
@@ -1065,7 +1058,7 @@ to drop pin</string>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cZB-Ea-x3J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1555.072463768116" y="332.8125"/>
+            <point key="canvasLocation" x="-1555" y="333"/>
         </scene>
         <!--Honeymoon Cell Detail View Controller-->
         <scene sceneID="fhk-D7-O0T">
@@ -1076,7 +1069,7 @@ to drop pin</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mgu-v2-3Ae">
-                                <rect key="frame" x="0.0" y="472" width="414" height="333"/>
+                                <rect key="frame" x="0.0" y="521" width="414" height="333"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="333" id="v6G-nq-1rS"/>
@@ -1114,7 +1107,7 @@ to drop pin</string>
                                 </connections>
                             </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahJ-aR-SS8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="384"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="477"/>
                                 <connections>
                                     <segue destination="TUP-Zr-BZG" kind="embed" id="07T-5C-Kip"/>
                                 </connections>
@@ -1152,7 +1145,7 @@ to drop pin</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7v-9g-wlW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1851" y="1771"/>
+            <point key="canvasLocation" x="252" y="1969"/>
         </scene>
         <!--Honeymoons-->
         <scene sceneID="ZcG-dC-cIL">
@@ -1182,9 +1175,7 @@ to drop pin</string>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tKb-8w-1RW"/>
-        <segue reference="Vvx-1a-hug"/>
-        <segue reference="Z6a-fa-1H9"/>
+        <segue reference="ab5-ja-axo"/>
         <segue reference="zrJ-A8-7M1"/>
     </inferredMetricsTieBreakers>
 </document>
