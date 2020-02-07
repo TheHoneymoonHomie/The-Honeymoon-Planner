@@ -9,8 +9,6 @@
 import UIKit
 import CoreData
 
-//private let reuseIdentifier = "ActivityCollectionViewCell"
-
 class HoneymoonCollectionViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
     
     var vacationController = VacationController()
@@ -21,7 +19,7 @@ class HoneymoonCollectionViewController: UICollectionViewController, NSFetchedRe
     var activities: [Activity] = []
     var vacations: [Vacation] = []
     
-        // MARK: - FRC
+    // MARK: - FRC
     
     lazy var vacationFetchedResultsController: NSFetchedResultsController<Vacation> = {
         let fetchRequest: NSFetchRequest<Vacation> = Vacation.fetchRequest()
@@ -46,93 +44,55 @@ class HoneymoonCollectionViewController: UICollectionViewController, NSFetchedRe
         return fetchedResultsController
         
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView?.reloadData()
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ActivityCollectionViewCell")
-
-        // Do any additional setup after loading the view.
+        vacationController.loadVacationFromPersistentStore()
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        collectionView?.reloadData()
+        vacationController.loadVacationFromPersistentStore()
     }
-
+    
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using [segue destinationViewController].
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
     // MARK: UICollectionViewDataSource
-
-
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         
         return vacationFetchedResultsController.sections?.count ?? 1
     }
-
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return vacationFetchedResultsController.sections?[section].numberOfObjects ?? 0
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActivityCollectionViewCell", for: indexPath) as? HoneymoonCustomCollectionViewCell else { return UICollectionViewCell() }
         
-//        cell.activty = activty
-//        cell.activities = activities
-//        cell.wishlist = wishlist
-//        cell.wishlists = wishlists
+        let aVacation = vacationFetchedResultsController.object(at: indexPath)
         
-        //loadImage function
-    
+        cell.vacationNameLabel.text = aVacation.title
+        
         return cell
     }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
-    }
-    */
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddHoneymoonFromCollectionVCSegue" {
             let destinationVC = segue.destination as? AddhoneyMoonCellViewController
-            //destinationVC?.honeymoonController = honeymoonController
-//            destinationVC?.postController = postController
             
         } else if segue.identifier == "CollectionCellDetailViewSegue" {
             
@@ -142,17 +102,10 @@ class HoneymoonCollectionViewController: UICollectionViewController, NSFetchedRe
             destinationVC?.activities = activities
             destinationVC?.wishlist = wishlist
             destinationVC?.wishlists = wishlists
-            //Example work
-//            guard let indexPath = collectionView.indexPathsForSelectedItems?.first,
-//                let postID = postController.posts[indexPath.row].id else { return }
-//
-//            destinationVC?.postController = postController
-//            destinationVC?.post = postController.posts[indexPath.row]
-//            destinationVC?.imageData = cache.value(for: postID)
-//            destinationVC?.cache = cache
+
         }
     }
-
+    
 }
 
 
