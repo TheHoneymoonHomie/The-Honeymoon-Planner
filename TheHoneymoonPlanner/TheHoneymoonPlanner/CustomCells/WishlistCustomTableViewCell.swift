@@ -7,27 +7,31 @@
 //
 
 import UIKit
+import CoreData
 
 class WishlistCustomTableViewCell: UITableViewCell {
     
-    var wishlist: Wishlist?
+//    var wishlist: Wishlist?
     var wishlists: [Wishlist] = []
     
     @IBOutlet weak var wishlistItemLabel: UILabel!
-    
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
     @IBAction func wishlistChecked(_ sender: UISwitch) {
         
     }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    var wishlist: Wishlist? {
+        didSet {
+            updateViews()
+        }
     }
+
+    func updateViews() {
+        
+        guard let wishlist = wishlist else { return }
+        
+        wishlistItemLabel.text = wishlist.item
+    }
+    
 
 }

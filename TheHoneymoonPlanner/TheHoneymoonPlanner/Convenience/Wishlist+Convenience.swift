@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import CoreData
+
+extension Wishlist {
+    
+    @discardableResult convenience init(item: String?, context: NSManagedObjectContext) {
+    
+        self.init(context: context)
+        self.item = item
+    }
+}

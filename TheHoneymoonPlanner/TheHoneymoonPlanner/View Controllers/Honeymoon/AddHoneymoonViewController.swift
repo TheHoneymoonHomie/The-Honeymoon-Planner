@@ -41,7 +41,7 @@ class AddHoneymoonViewController: UIViewController, UITableViewDelegate, UITable
     
         tableView.delegate = self
         tableView.dataSource = self
-        fetchWishlistItems()
+//        fetchWishlistItems()
         
         loadDatePicker()
     }
@@ -101,7 +101,7 @@ class AddHoneymoonViewController: UIViewController, UITableViewDelegate, UITable
         dateFormatter.dateStyle = .medium
         dateFormatter.timeStyle = .short
         
-        let vacation = Vacation(context: CoreDataStack.context)
+//        let vacation = Vacation(context: CoreDataStack.context)
         
         guard let vacationLocation = self.vacationLocation else { return }
         
@@ -110,30 +110,30 @@ class AddHoneymoonViewController: UIViewController, UITableViewDelegate, UITable
         
 //        vacation.cost = costTextField.text as? Double ?? 0.00
         // TODO: FIX THIS
-        vacation.date_end = nil
-        vacation.date_start = nil
-        vacation.imageURL = imageURL()
-        vacation.latitude = latitude
-       // vacation.location = vacationLocation
-        vacation.longitude = longitude
-        vacation.title = honeymoonNameTextField.text
+//        vacation.date_end = nil
+//        vacation.date_start = nil
+//        vacation.imageURL = imageURL()
+//        vacation.latitude = latitude
+//       // vacation.location = vacationLocation
+//        vacation.longitude = longitude
+//        vacation.title = honeymoonNameTextField.text
 //        vacation.location = vacationLocationLabel.text
         
-        CoreDataStack.saveContext()
+
     }
     
-    func fetchWishlistItems() {
-           
-           let fetchRequest: NSFetchRequest<Wishlist> = Wishlist.fetchRequest()
-           do {
-               wishlists = try CoreDataStack.context.fetch(fetchRequest)
-               tableView.reloadData()
-               print(wishlists)
-               print(wishlists.count)
-           } catch {
-               print(error)
-           }
-       }
+//    func fetchWishlistItems() {
+//
+//           let fetchRequest: NSFetchRequest<Wishlist> = Wishlist.fetchRequest()
+//           do {
+//               wishlists = try CoreDataStack.context.fetch(fetchRequest)
+//               tableView.reloadData()
+//               print(wishlists)
+//               print(wishlists.count)
+//           } catch {
+//               print(error)
+//           }
+//       }
     
     func fetchVacationLocationTitleAndPressedLocation() {
         
@@ -193,10 +193,10 @@ class AddHoneymoonViewController: UIViewController, UITableViewDelegate, UITable
         if (editingStyle == .delete) {
             
             let wishlist = wishlists[indexPath.row]
-            CoreDataStack.context.delete(wishlist)
+//            CoreDataStack.context.delete(wishlist)
             
-            CoreDataStack.saveContext()
-            fetchWishlistItems()
+//            CoreDataStack.saveContext()
+//            fetchWishlistItems()
         }
     }
     

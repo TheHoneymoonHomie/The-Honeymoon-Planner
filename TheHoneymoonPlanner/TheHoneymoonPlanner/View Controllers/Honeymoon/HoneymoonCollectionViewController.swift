@@ -35,7 +35,7 @@ class HoneymoonCollectionViewController: UICollectionViewController {
     func fetchVacationFromCoreData() {
         let fetchRequest: NSFetchRequest<Vacation> = Vacation.fetchRequest()
                do {
-                   vacations = try CoreDataStack.context.fetch(fetchRequest)
+//                   vacations = try CoreDataStack.context.fetch(fetchRequest)
                    print(vacations)
                } catch {
                    print(error)

@@ -73,7 +73,7 @@ class AddActivityMapViewController: UIViewController {
     @IBAction func continueButtonTapped(_ sender: UIButton) {
             guard let pressedLocation = pressedLocation else { return }
             //let actionLocationTitle = addLocationTextField.text
-        CoreDataStack.saveContext()
+//        CoreDataStack.saveContext()
         print(pressedLocation)
         //print(vacationLocationTitle)
         
