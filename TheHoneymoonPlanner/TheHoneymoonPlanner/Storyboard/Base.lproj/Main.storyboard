@@ -801,7 +801,7 @@ to drop pin</string>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ActivityCollectionViewCell" id="IcG-tv-7XU" customClass="HoneymoonCustomCollectionViewCell" customModule="TheHoneymoonPlanner" customModuleProvider="target">
                                 <rect key="frame" x="10" y="10" width="150" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" insetsLayoutMarginsFromSafeArea="NO" id="783-UR-p8g">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" insetsLayoutMarginsFromSafeArea="NO" id="783-UR-p8g">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
