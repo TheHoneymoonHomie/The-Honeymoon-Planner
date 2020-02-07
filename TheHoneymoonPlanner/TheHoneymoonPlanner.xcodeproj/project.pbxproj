@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C27495F23EDBC3C00D01555 /* VacationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27495E23EDBC3C00D01555 /* VacationController.swift */; };
+		1C27496B23EDF5F800D01555 /* TheHoneymoonPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27496A23EDF5F800D01555 /* TheHoneymoonPlannerTests.swift */; };
+		1C27497323EDF8E100D01555 /* THPUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C27497223EDF8E100D01555 /* THPUITest.swift */; };
 		1C765EBB23EA8C0100478262 /* HoneymoonCustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C765EBA23EA8C0100478262 /* HoneymoonCustomCollectionViewCell.swift */; };
 		1C765EBF23EA949100478262 /* AddhoneyMoonCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C765EBE23EA949100478262 /* AddhoneyMoonCellViewController.swift */; };
 		1C765EC123EB46D500478262 /* AddHoneymoonLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C765EC023EB46D500478262 /* AddHoneymoonLocationViewController.swift */; };
@@ -37,8 +39,22 @@
 		85E6714223ECCDF600DD7EEC /* WishlistController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E6714123ECCDF600DD7EEC /* WishlistController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1C27496D23EDF5F800D01555 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F1A977923E4F5DB00AD3BC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F1A978023E4F5DB00AD3BC3;
+			remoteInfo = TheHoneymoonPlanner;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		1C27495E23EDBC3C00D01555 /* VacationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VacationController.swift; sourceTree = "<group>"; };
+		1C27496823EDF5F800D01555 /* TheHoneymoonPlannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheHoneymoonPlannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C27496A23EDF5F800D01555 /* TheHoneymoonPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheHoneymoonPlannerTests.swift; sourceTree = "<group>"; };
+		1C27496C23EDF5F800D01555 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C27497223EDF8E100D01555 /* THPUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THPUITest.swift; sourceTree = "<group>"; };
 		1C765EBA23EA8C0100478262 /* HoneymoonCustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoneymoonCustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		1C765EBE23EA949100478262 /* AddhoneyMoonCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddhoneyMoonCellViewController.swift; sourceTree = "<group>"; };
 		1C765EC023EB46D500478262 /* AddHoneymoonLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHoneymoonLocationViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +89,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1C27496523EDF5F800D01555 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F1A977E23E4F5DB00AD3BC3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -89,6 +112,16 @@
 				4F1A978A23E4F5DB00AD3BC3 /* Main.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		1C27496923EDF5F800D01555 /* TheHoneymoonPlannerTests */ = {
+			isa = PBXGroup;
+			children = (
+				1C27496A23EDF5F800D01555 /* TheHoneymoonPlannerTests.swift */,
+				1C27497223EDF8E100D01555 /* THPUITest.swift */,
+				1C27496C23EDF5F800D01555 /* Info.plist */,
+			);
+			path = TheHoneymoonPlannerTests;
 			sourceTree = "<group>";
 		};
 		1CFB392D23E8DAD6008674FE /* CustomCells */ = {
@@ -115,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				4F1A978323E4F5DB00AD3BC3 /* TheHoneymoonPlanner */,
+				1C27496923EDF5F800D01555 /* TheHoneymoonPlannerTests */,
 				4F1A978223E4F5DB00AD3BC3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				4F1A978123E4F5DB00AD3BC3 /* TheHoneymoonPlanner.app */,
+				1C27496823EDF5F800D01555 /* TheHoneymoonPlannerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -215,11 +250,11 @@
 		85A4DD6123E7CA45001B7A2A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8567816E23EA3E4B00580A4C /* Wishlist */,
 				8567816B23EA3DE500580A4C /* Activities */,
 				8567816C23EA3E0800580A4C /* Budget */,
 				8567816D23EA3E2900580A4C /* General */,
 				8567816F23EA3E5900580A4C /* Honeymoon */,
-				8567816E23EA3E4B00580A4C /* Wishlist */,
 				1CFB392223E8D69F008674FE /* TheHoneymoonPlanner-Bridging-Header.h */,
 			);
 			path = "View Controllers";
@@ -228,6 +263,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1C27496723EDF5F800D01555 /* TheHoneymoonPlannerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C27496F23EDF5F800D01555 /* Build configuration list for PBXNativeTarget "TheHoneymoonPlannerTests" */;
+			buildPhases = (
+				1C27496423EDF5F800D01555 /* Sources */,
+				1C27496523EDF5F800D01555 /* Frameworks */,
+				1C27496623EDF5F800D01555 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C27496E23EDF5F800D01555 /* PBXTargetDependency */,
+			);
+			name = TheHoneymoonPlannerTests;
+			productName = TheHoneymoonPlannerTests;
+			productReference = 1C27496823EDF5F800D01555 /* TheHoneymoonPlannerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4F1A978023E4F5DB00AD3BC3 /* TheHoneymoonPlanner */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F1A979523E4F5E000AD3BC3 /* Build configuration list for PBXNativeTarget "TheHoneymoonPlanner" */;
@@ -255,6 +308,10 @@
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Jonalynn Masters";
 				TargetAttributes = {
+					1C27496723EDF5F800D01555 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 4F1A978023E4F5DB00AD3BC3;
+					};
 					4F1A978023E4F5DB00AD3BC3 = {
 						CreatedOnToolsVersion = 11.3;
 						LastSwiftMigration = 1120;
@@ -275,11 +332,19 @@
 			projectRoot = "";
 			targets = (
 				4F1A978023E4F5DB00AD3BC3 /* TheHoneymoonPlanner */,
+				1C27496723EDF5F800D01555 /* TheHoneymoonPlannerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1C27496623EDF5F800D01555 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F1A977F23E4F5DB00AD3BC3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,6 +358,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1C27496423EDF5F800D01555 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C27497323EDF8E100D01555 /* THPUITest.swift in Sources */,
+				1C27496B23EDF5F800D01555 /* TheHoneymoonPlannerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4F1A977D23E4F5DB00AD3BC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,6 +401,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1C27496E23EDF5F800D01555 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F1A978023E4F5DB00AD3BC3 /* TheHoneymoonPlanner */;
+			targetProxy = 1C27496D23EDF5F800D01555 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		4F1A978A23E4F5DB00AD3BC3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -347,6 +429,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1C27497023EDF5F800D01555 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X77B7DPNM6;
+				INFOPLIST_FILE = TheHoneymoonPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerryhaaser.TheHoneymoonPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheHoneymoonPlanner.app/TheHoneymoonPlanner";
+			};
+			name = Debug;
+		};
+		1C27497123EDF5F800D01555 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X77B7DPNM6;
+				INFOPLIST_FILE = TheHoneymoonPlannerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jerryhaaser.TheHoneymoonPlannerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheHoneymoonPlanner.app/TheHoneymoonPlanner";
+			};
+			name = Release;
+		};
 		4F1A979323E4F5E000AD3BC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -507,6 +629,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1C27496F23EDF5F800D01555 /* Build configuration list for PBXNativeTarget "TheHoneymoonPlannerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C27497023EDF5F800D01555 /* Debug */,
+				1C27497123EDF5F800D01555 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4F1A977C23E4F5DB00AD3BC3 /* Build configuration list for PBXProject "TheHoneymoonPlanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
