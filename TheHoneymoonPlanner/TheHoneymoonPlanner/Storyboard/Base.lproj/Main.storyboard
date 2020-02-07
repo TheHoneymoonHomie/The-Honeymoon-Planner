@@ -209,7 +209,7 @@
             <objects>
                 <tableViewController id="TUP-Zr-BZG" customClass="ActivityTableViewController" customModule="TheHoneymoonPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hDX-jH-8D3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="477"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="384"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -338,7 +338,7 @@ to drop pin</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acitvity Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8RO-6k-kMv">
-                                <rect key="frame" x="20" y="99" width="111" height="20.5"/>
+                                <rect key="frame" x="20" y="50" width="111" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20.5" id="9oh-dM-reE"/>
                                 </constraints>
@@ -347,13 +347,13 @@ to drop pin</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Activity Cost:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBK-6i-g1A">
-                                <rect key="frame" x="20" y="144.5" width="104.5" height="21"/>
+                                <rect key="frame" x="20" y="95.5" width="104.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8eO-Am-Kqh">
-                                <rect key="frame" x="20" y="306" width="374" height="556"/>
+                                <rect key="frame" x="20" y="257" width="374" height="556"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="556" id="c7b-3p-kag"/>
@@ -363,7 +363,7 @@ to drop pin</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1K-JL-bAk">
-                                <rect key="frame" x="360" y="43.5" width="34" height="30"/>
+                                <rect key="frame" x="360" y="-5.5" width="34" height="30"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="QiA-cX-NnG" eventType="touchUpInside" id="wfe-LC-9Sc"/>
@@ -371,7 +371,7 @@ to drop pin</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cpq-EQ-evF">
-                                <rect key="frame" x="20" y="44" width="48" height="30"/>
+                                <rect key="frame" x="20" y="-5" width="48" height="30"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
                                     <action selector="cancelButtonTapped:" destination="QiA-cX-NnG" eventType="touchUpInside" id="U0l-sR-qMe"/>
@@ -379,17 +379,17 @@ to drop pin</string>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uxj-83-k1m">
-                                <rect key="frame" x="139" y="137" width="268" height="36"/>
+                                <rect key="frame" x="139" y="88" width="268" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pDp-Wk-3cw">
-                                <rect key="frame" x="139" y="92.5" width="268" height="33.5"/>
+                                <rect key="frame" x="139" y="43.5" width="268" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="np5-Ti-oYX" userLabel="startTextField">
-                                <rect key="frame" x="139" y="185" width="268" height="32"/>
+                                <rect key="frame" x="139" y="136" width="268" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -403,7 +403,7 @@ to drop pin</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Activity Start:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="end-nb-pjI" userLabel="Avtivity Start">
-                                <rect key="frame" x="20" y="190.5" width="104.5" height="21"/>
+                                <rect key="frame" x="20" y="141.5" width="104.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103.5" id="7gi-wT-yO2"/>
                                     <constraint firstAttribute="height" constant="21" id="dcP-a2-UrR"/>
@@ -413,18 +413,18 @@ to drop pin</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Activity Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIu-dx-Wvr">
-                                <rect key="frame" x="20" y="268" width="210" height="30"/>
+                                <rect key="frame" x="20" y="219" width="210" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YOR-wc-xPp" userLabel="endTextField">
-                                <rect key="frame" x="139" y="225" width="268" height="35"/>
+                                <rect key="frame" x="139" y="176" width="268" height="35"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Activity End:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgl-Cj-pBC">
-                                <rect key="frame" x="20" y="232" width="111" height="21"/>
+                                <rect key="frame" x="20" y="183" width="111" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -493,7 +493,7 @@ to drop pin</string>
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="735-zR-IX3" customClass="ActivityDetailViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G3G-Dr-pKt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="477"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="384"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMR-2w-B4O">
@@ -522,7 +522,7 @@ to drop pin</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4hz-XK-5R7">
-                                <rect key="frame" x="20" y="239" width="374" height="238"/>
+                                <rect key="frame" x="20" y="239" width="374" height="145"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -787,71 +787,59 @@ to drop pin</string>
         <scene sceneID="wpB-tD-TJe">
             <objects>
                 <collectionViewController modalPresentationStyle="fullScreen" id="yHn-nB-fBa" customClass="HoneymoonCollectionViewController" customModule="TheHoneymoonPlanner" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Bfc-9l-mAc">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" dataMode="prototypes" id="Bfc-9l-mAc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="5" minimumInteritemSpacing="5" id="PmX-q2-aOe">
-                            <size key="itemSize" width="50" height="50"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="PmX-q2-aOe">
+                            <size key="itemSize" width="150" height="240"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ActivityCollectionViewCell" id="IcG-tv-7XU" customClass="HoneymoonCustomCollectionViewCell" customModule="TheHoneymoonPlanner" customModuleProvider="target">
-                                <rect key="frame" x="10" y="10" width="190" height="225"/>
+                                <rect key="frame" x="10" y="10" width="150" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="783-UR-p8g">
-                                    <rect key="frame" x="0.0" y="0.0" width="190" height="225"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" insetsLayoutMarginsFromSafeArea="NO" id="783-UR-p8g">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="240"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lCw-MM-c1p">
-                                            <rect key="frame" x="0.0" y="0.0" width="190" height="139"/>
+                                        <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lCw-MM-c1p">
+                                            <rect key="frame" x="0.0" y="0.0" width="210" height="139"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AX6-hs-Kxw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="190" height="139"/>
-                                                </imageView>
+                                                <stackView opaque="NO" contentMode="center" fixedFrame="YES" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Z2u-NM-T2F">
+                                                    <rect key="frame" x="47" y="38.5" width="276" height="223.5"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Screen Shot 2020-02-05 at 4.51.07 PM" translatesAutoresizingMaskIntoConstraints="NO" id="AX6-hs-Kxw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="276" height="162"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vacation Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8e-Qp-QqI">
+                                                            <rect key="frame" x="0.0" y="162" width="276" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcI-VD-2iB">
+                                                            <rect key="frame" x="0.0" y="182.5" width="276" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$$$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KHE-tH-guQ">
+                                                            <rect key="frame" x="0.0" y="203" width="276" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="AX6-hs-Kxw" secondAttribute="trailing" id="4cb-8d-wnT"/>
-                                                <constraint firstItem="AX6-hs-Kxw" firstAttribute="top" secondItem="lCw-MM-c1p" secondAttribute="top" id="4qN-s2-qZ0"/>
-                                                <constraint firstItem="AX6-hs-Kxw" firstAttribute="leading" secondItem="lCw-MM-c1p" secondAttribute="leading" id="MXa-Qf-88K"/>
-                                                <constraint firstAttribute="width" secondItem="lCw-MM-c1p" secondAttribute="height" multiplier="175:128" id="Q4N-OR-I4n"/>
-                                                <constraint firstAttribute="bottom" secondItem="AX6-hs-Kxw" secondAttribute="bottom" id="pI6-v3-dlx"/>
-                                            </constraints>
                                         </view>
-                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Z2u-NM-T2F">
-                                            <rect key="frame" x="8" y="147" width="115.5" height="61.5"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vacation Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8e-Qp-QqI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="115.5" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="★★★★" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcI-VD-2iB">
-                                                    <rect key="frame" x="0.0" y="20.5" width="68" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$$$$" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KHE-tH-guQ">
-                                                    <rect key="frame" x="0.0" y="41" width="43" height="20.5"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="lCw-MM-c1p" firstAttribute="leading" secondItem="783-UR-p8g" secondAttribute="leading" id="KWy-tm-eA2"/>
-                                        <constraint firstItem="lCw-MM-c1p" firstAttribute="top" secondItem="783-UR-p8g" secondAttribute="top" id="YLx-eK-JJi"/>
-                                        <constraint firstAttribute="trailing" secondItem="lCw-MM-c1p" secondAttribute="trailing" id="bja-fR-7ze"/>
-                                    </constraints>
                                 </collectionViewCellContentView>
-                                <size key="customSize" width="190" height="225"/>
                                 <connections>
                                     <outlet property="imageView" destination="AX6-hs-Kxw" id="EPg-A4-13T"/>
                                     <outlet property="priceLabel" destination="KHE-tH-guQ" id="EM0-wT-sBx"/>
@@ -859,46 +847,6 @@ to drop pin</string>
                                     <outlet property="wishlistLabel" destination="fcI-VD-2iB" id="KSR-ET-zW3"/>
                                     <segue destination="6ZU-US-iNW" kind="show" identifier="CollectionCellDetailViewSegue" id="tKb-8w-1RW"/>
                                 </connections>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ddv-Mu-otY">
-                                <rect key="frame" x="214" y="10" width="190" height="225"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPr-H8-84S">
-                                    <rect key="frame" x="0.0" y="0.0" width="190" height="225"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Vqj-AJ-BJQ">
-                                <rect key="frame" x="10" y="240" width="190" height="225"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nbd-Le-3fC">
-                                    <rect key="frame" x="0.0" y="0.0" width="190" height="225"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DJW-vf-fLT">
-                                <rect key="frame" x="214" y="240" width="190" height="225"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Sjf-lg-jnm">
-                                    <rect key="frame" x="0.0" y="0.0" width="190" height="225"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OSy-61-8kc">
-                                <rect key="frame" x="10" y="470" width="190" height="225"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="LRH-zT-8GX">
-                                    <rect key="frame" x="0.0" y="0.0" width="190" height="225"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="W1X-0Z-flW">
-                                <rect key="frame" x="214" y="470" width="190" height="225"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z68-WA-Q3O">
-                                    <rect key="frame" x="0.0" y="0.0" width="190" height="225"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -916,7 +864,7 @@ to drop pin</string>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tmh-cC-Au4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="236" y="1094"/>
+            <point key="canvasLocation" x="234.78260869565219" y="1092.8571428571429"/>
         </scene>
         <!--Discover-->
         <scene sceneID="KtV-Ow-3wl">
@@ -1069,7 +1017,7 @@ to drop pin</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mgu-v2-3Ae">
-                                <rect key="frame" x="0.0" y="521" width="414" height="333"/>
+                                <rect key="frame" x="0.0" y="472" width="414" height="333"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="333" id="v6G-nq-1rS"/>
@@ -1107,7 +1055,7 @@ to drop pin</string>
                                 </connections>
                             </tableView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahJ-aR-SS8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="477"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="384"/>
                                 <connections>
                                     <segue destination="TUP-Zr-BZG" kind="embed" id="07T-5C-Kip"/>
                                 </connections>
@@ -1175,7 +1123,7 @@ to drop pin</string>
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ab5-ja-axo"/>
+        <segue reference="tKb-8w-1RW"/>
         <segue reference="zrJ-A8-7M1"/>
     </inferredMetricsTieBreakers>
 </document>

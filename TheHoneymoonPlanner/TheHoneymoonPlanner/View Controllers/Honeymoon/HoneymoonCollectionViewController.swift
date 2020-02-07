@@ -9,25 +9,54 @@
 import UIKit
 import CoreData
 
-private let reuseIdentifier = "ActivityCollectionViewCell"
+//private let reuseIdentifier = "ActivityCollectionViewCell"
 
-class HoneymoonCollectionViewController: UICollectionViewController {
+class HoneymoonCollectionViewController: UICollectionViewController, NSFetchedResultsControllerDelegate {
+    
+    var vacationController = VacationController()
     
     var wishlist: Wishlist?
     var wishlists: [Wishlist] = []
     var activty: Activity?
     var activities: [Activity] = []
     var vacations: [Vacation] = []
+    
+        // MARK: - FRC
+    
+    lazy var vacationFetchedResultsController: NSFetchedResultsController<Vacation> = {
+        let fetchRequest: NSFetchRequest<Vacation> = Vacation.fetchRequest()
+        
+        let descriptor = NSSortDescriptor(keyPath: \Vacation.title, ascending: true)
+        fetchRequest.sortDescriptors = [descriptor]
+        
+        let moc = CoreDataStack.shared.mainContext
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest,
+                                                                  managedObjectContext: moc,
+                                                                  sectionNameKeyPath: "title",
+                                                                  cacheName: nil)
+        
+        fetchedResultsController.delegate = self
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            print("error performing initial fetch for frc: \(error)")
+        }
+        
+        return fetchedResultsController
+        
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchVacationFromCoreData()
+        
+        collectionView?.reloadData()
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "ActivityCollectionViewCell")
 
         // Do any additional setup after loading the view.
     }
@@ -36,15 +65,6 @@ class HoneymoonCollectionViewController: UICollectionViewController {
         collectionView?.reloadData()
     }
 
-    func fetchVacationFromCoreData() {
-        let fetchRequest: NSFetchRequest<Vacation> = Vacation.fetchRequest()
-               do {
- //                  vacations = try CoreDataStack.context.fetch(fetchRequest)
-                   print(vacations)
-               } catch {
-                   print(error)
-               }
-    }
     
     /*
     // MARK: - Navigation
@@ -61,17 +81,16 @@ class HoneymoonCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        //UPDate this to activityController or whatever
-        return activities.count
+        return vacationFetchedResultsController.sections?.count ?? 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? HoneymoonCustomCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ActivityCollectionViewCell", for: indexPath) as? HoneymoonCustomCollectionViewCell else { return UICollectionViewCell() }
         
-        cell.activty = activty
-        cell.activities = activities
-        cell.wishlist = wishlist
-        cell.wishlists = wishlists
+//        cell.activty = activty
+//        cell.activities = activities
+//        cell.wishlist = wishlist
+//        cell.wishlists = wishlists
         
         //loadImage function
     
@@ -135,3 +154,5 @@ class HoneymoonCollectionViewController: UICollectionViewController {
     }
 
 }
+
+
