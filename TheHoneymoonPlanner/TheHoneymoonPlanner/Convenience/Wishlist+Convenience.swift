@@ -11,9 +11,12 @@ import CoreData
 
 extension Wishlist {
     
-    @discardableResult convenience init(item: String?, context: NSManagedObjectContext) {
+    @discardableResult convenience init(item: String?, isSelected: Bool = false, context: NSManagedObjectContext) {
     
         self.init(context: context)
         self.item = item
+        self.isSelected = isSelected
+        
+        
     }
 }
