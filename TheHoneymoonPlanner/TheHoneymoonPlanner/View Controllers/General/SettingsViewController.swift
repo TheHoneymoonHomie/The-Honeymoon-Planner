@@ -44,7 +44,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         tableView.dataSource = self
         
-        fetchWishlistItems()
+//        fetchWishlistItems()
         
         updateViews()
     }
@@ -52,7 +52,7 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        fetchWishlistItems()
+//        fetchWishlistItems()
         updateViews()
     }
     
@@ -77,25 +77,25 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         if (editingStyle == .delete) {
             
             let wishlist = wishlists[indexPath.row]
-            CoreDataStack.context.delete(wishlist)
-            
-            CoreDataStack.saveContext()
-            fetchWishlistItems()
+//            CoreDataStack.context.delete(wishlist)
+//
+//            CoreDataStack.saveContext()
+//            fetchWishlistItems()
         }
     }
     
-    func fetchWishlistItems() {
-        
-        let fetchRequest: NSFetchRequest<Wishlist> = Wishlist.fetchRequest()
-        do {
-            wishlists = try CoreDataStack.context.fetch(fetchRequest)
-            tableView.reloadData()
-            print(wishlists)
-            print(wishlists.count)
-        } catch {
-            print(error)
-        }
-    }
+//    func fetchWishlistItems() {
+//
+//        let fetchRequest: NSFetchRequest<Wishlist> = Wishlist.fetchRequest()
+//        do {
+////            wishlists = try CoreDataStack.context.fetch(fetchRequest)
+//            tableView.reloadData()
+//            print(wishlists)
+//            print(wishlists.count)
+//        } catch {
+//            print(error)
+//        }
+//    }
     
     func updateViews() {
         let budgetValue = UserDefaults.standard.double(forKey: "budgetTotal")

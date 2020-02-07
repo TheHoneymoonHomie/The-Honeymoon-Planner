@@ -116,7 +116,7 @@ class ActivityViewController: UIViewController {
         activity?.act_longitude = longitude
         activity?.name = activityNameTextField.text
         //ativity.vacation = ?
-        CoreDataStack.saveContext()
+//        CoreDataStack.saveContext()
         
     }
     
